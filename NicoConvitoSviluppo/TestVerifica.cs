@@ -35,5 +35,17 @@ namespace NicoConvitoSviluppo
             double risposta_effettiva = Gestione.Tariffa3(ore, tariffa);
             Assert.AreEqual(rispsosta_aspettata, risposta_effettiva);
         }
+
+
+
+        [TestMethod]
+        public void CostoTotale()
+        {
+            int ore = 3;
+            double risposta_aspettata = 3;
+            double risposta_effettiva = Gestione.TariffaConsigliata(ore);
+            Assert.AreEqual(risposta_aspettata, risposta_effettiva);
+        }
+
     }
 }

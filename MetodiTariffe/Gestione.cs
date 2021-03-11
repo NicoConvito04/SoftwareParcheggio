@@ -31,5 +31,34 @@ namespace MetodiTariffe
             }
             return costoTot;
         }
+        
+
+
+        public static double TariffaConsigliata(int ore)
+        {
+            double costoTot = 0;
+            double tariffa2 = 1;
+            double tariffa3 = 1.20;
+            double costoTot2 = 0;
+            double costoTot3 = 0;
+            if (ore > 15)
+            {
+                costoTot = 15;
+            }
+            else
+            {
+                costoTot2 = ore * tariffa2;
+                costoTot3 = (ore - 1) * tariffa3;
+            }
+            if (costoTot2 > costoTot3)
+            {
+                costoTot = costoTot2;
+            }
+            else
+            {
+                costoTot = costoTot3;
+            }
+            return costoTot;
+        }
     }
 }
