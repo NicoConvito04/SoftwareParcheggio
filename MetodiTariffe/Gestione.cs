@@ -37,20 +37,18 @@ namespace MetodiTariffe
         public static double TariffaConsigliata(int ore)
         {
             double costoTot = 0;
+            double tariffa1 = 15;
             double tariffa2 = 1;
             double tariffa3 = 1.20;
             double costoTot2 = 0;
             double costoTot3 = 0;
+            costoTot2 = ore * tariffa2;
+            costoTot3 = (ore - 1) * tariffa3;
             if (ore > 15)
             {
-                costoTot = 15;
+                costoTot = tariffa1;
             }
-            else
-            {
-                costoTot2 = ore * tariffa2;
-                costoTot3 = (ore - 1) * tariffa3;
-            }
-            if (costoTot2 > costoTot3)
+            else if (costoTot2 < costoTot3)
             {
                 costoTot = costoTot2;
             }

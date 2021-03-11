@@ -41,8 +41,8 @@ namespace NicoConvitoSviluppo
         [TestMethod]
         public void CostoTotale()
         {
-            int ore = 3;
-            double risposta_aspettata = 3;
+            int ore = 16;
+            double risposta_aspettata = 15;
             double risposta_effettiva = Gestione.TariffaConsigliata(ore);
             Assert.AreEqual(risposta_aspettata, risposta_effettiva);
         }
